@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+	</head>
+   <body>
+
+<meta http-equiv="Refresh" content="3" />
+
+		{% for item in data %}
+		<br>
+
+    	<a href="{{item.link}}"> {{item.ref}} </a><br>
+    	{{item.description}}<br>
+		{% for image in images %}
+   		<img src="images.craigslist.org/{{image}}"><br>
+		{% endfor %}
+		<hr>
+			{% endfor %}
+
+
+   </body>
+</html>
